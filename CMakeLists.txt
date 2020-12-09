@@ -36,3 +36,9 @@ include_directories(
   include
 )
 
+## Declare cpp executables
+add_executable(rpactionmonitor src/RPActionMonitor.cpp)
+add_dependencies(rpactionmonitor ${catkin_EXPORTED_TARGETS})
+
+## Specify libraries against which to link a library or executable target
+target_link_libraries(rpactionmonitor ${catkin_LIBRARIES} ${Boost_LIBRARIES})
